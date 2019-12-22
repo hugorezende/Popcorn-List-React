@@ -17,7 +17,7 @@ export default class MovieList extends Component {
         }else{
             this.setState({ movies: [] })
         }
-    },500)
+    },200)
 
     componentDidMount() {
         if (this.state.query !== "") {

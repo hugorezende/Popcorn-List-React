@@ -4,9 +4,11 @@ import { getMoviePoster } from '../../utils/movieUtils';
 
 class MovieItem extends Component {
     state = {
+        mounted: false,
         poster_url: ''
     }
     componentDidMount() {
+        this.setState({mounted:true})
         getMoviePoster(this.props.movie.id).then(
             (data) => {
                 this.setState({ poster_url: data })
@@ -14,7 +16,7 @@ class MovieItem extends Component {
     }
     render() {
         return (
-            <div className="movie_item">
+            <div className="movie_item fadeIn" >
                 <div className="poster"><img src={"https://image.tmdb.org/t/p/w200" + this.state.poster_url} /></div>
                 <div className="info">
                     <div className="title">{this.props.movie.title}</div>
