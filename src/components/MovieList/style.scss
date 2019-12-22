@@ -1,0 +1,33 @@
+.movie_item{
+    width: 480px;
+    margin: 0 auto;
+    margin-top:15px;
+    display: flex;
+    .poster{
+        width: 80px;
+        height: 120px;
+        margin: 10px;
+        img{
+            width: 80px;
+        }        
+    }
+    .info{
+        margin: 10px;
+        padding: 5px;
+        margin-left: 10px;
+        width: 300px;
+
+        .title{
+            font-size: 22px;
+            font-weight: 700;
+        }
+        .year{
+            padding: 5px 0;
+            font-size: 14px;
+        }
+        .description{
+            padding: 5px 0;
+            font-size: 14px;
+        }
+    }
+}
